@@ -17,7 +17,7 @@ const TeachingsAdultsModel = require("./models/TeachingsAdults");
 const teachingsAdults = require("./bin/teachingsAdults.js");
 
 const AdminModel = require("./models/Admin");
-const Admin = require("./bin/Admin.js");
+const Admin = require("./bin/admin.js");
 
 // config -----------------------
 
