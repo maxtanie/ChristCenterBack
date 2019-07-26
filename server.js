@@ -23,7 +23,6 @@ const Admin = require("./bin/admin.js");
 
 // cors options : allows your front to communicate through ajax with your backend
 const corsOptions = {
-  origin: [process.env.FRONT_URL],
   credentials: true, // required to let axios pass the cookie with any request
   optionsSuccessStatus: 200
 };
@@ -65,6 +64,8 @@ app.use("/", indexRoute.router);
 app.use("/", teachings.router);
 app.use("/admin", admin);
 
+console.log(teachingsAdults);
+
 // Create our Movies Model
 // console.log(movies);
 // console.log("--------");
@@ -84,21 +85,29 @@ app.use("/admin", admin);
 // };
 // pushSomeData();
 
-// pushTeachingsData = () => {
-//   TeachingsAdultsModel.insertMany(teachingsAdults)
-//     .then(dbRes => {
-//       console.log(dbRes);
-//       dbRes
-//         .forEach((teachingsAdults, i) => console.log(teachingsAdults.text, i))
-//         .catch(dbErr => {
-//           console.log(dbErr);
-//         });
-//     })
-//     .catch(dbErr => {
-//       console.log(dbErr);
-//     });
-// };
-// pushTeachingsData();
+pushTeachingsData = () => {
+  const teachings = ({
+    titleTeachings,
+    sliderCitation,
+    titleArticle,
+    titleArticle,
+    imageArticle,
+    articlePartOne,
+    articlePartTwo,
+    conclusion
+  } = teachingsAdults);
+  TeachingsAdultsModel.insertMany(teachings)
+    .then(dbRes => {
+      console.log(dbRes);
+      dbRes.forEach((teachingsAdults, i) =>
+        console.log(teachingsAdults.titleTeachings, i)
+      );
+    })
+    .catch(dbErr => {
+      console.log(dbErr);
+    });
+};
+pushTeachingsData();
 
 // console.log(admin);
 // console.log("--------");

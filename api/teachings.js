@@ -14,13 +14,48 @@ router.get("/teachings/adults", (req, res) => {
     .catch(error => res.status(500).send("Something went wrong", error));
 });
 
+// router.post("/teachings/adults", (req, res) => {
+//   console.log("ici all teachings adults transformed");
+//   const { title, text, image } = req.body;
+//   const newTeachingsAdults = {
+//     title,
+//     text,
+//     image
+//   };
+
+//   create(newTeachingsAdults)
+//     .then(dbRes => {
+//       res.status(200).json(dbRes);
+//       // res.redirect("/teachings/adults")
+
+//       console.log("POPOPOPOPO");
+//     })
+//     .catch(dbErr => {
+//       res.send(dbErr);
+//       console.log("TOUT VA MAL");
+//     });
+// });
+
 router.post("/teachings/adults", (req, res) => {
   console.log("ici all teachings adults transformed");
-  const { title, text, image } = req.body;
+  const {
+    titleTeachings,
+    sliderCitation,
+    titleArticle,
+    imageArticle,
+    articlePartOne,
+    articlePartTwo,
+    conclusion
+  } = req.body;
+  console.log(req.body);
   const newTeachingsAdults = {
-    title,
-    text,
-    image
+    titleTeachings,
+    sliderCitation,
+    titleArticle,
+    imageArticle,
+    articlePartOne,
+    articlePartTwo,
+    conclusion
   };
 
   create(newTeachingsAdults)
