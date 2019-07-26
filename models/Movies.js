@@ -17,7 +17,7 @@ const moviesSchema = new Schema({
   actors: Array,
   type: Array,
   casting: Array,
-  imageSlide: Array
+  imageSlide: String
 });
 
 const moviesModel = mongoose.model("Movies", moviesSchema);

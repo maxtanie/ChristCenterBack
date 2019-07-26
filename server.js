@@ -68,23 +68,23 @@ app.use("/admin", admin);
 console.log(teachingsAdults);
 
 // Create our Movies Model
-// console.log(movies);
-// console.log("--------");
-// pushSomeData = () => {
-//   MoviesModel.insertMany(movies)
-//     .then(dbRes => {
-//       console.log(dbRes);
-//       dbRes
-//         .forEach((Movies, i) => console.log(Movies.title, i))
-//         .catch(dbErr => {
-//           console.log(dbErr);
-//         });
-//     })
-//     .catch(dbErr => {
-//       console.log(dbErr);
-//     });
-// };
-// pushSomeData();
+console.log(movies);
+console.log("--------");
+pushSomeData = () => {
+  MoviesModel.insertMany(movies)
+    .then(dbRes => {
+      console.log(dbRes);
+      dbRes
+        .forEach((Movies, i) => console.log(Movies.title, i))
+        .catch(dbErr => {
+          console.log(dbErr);
+        });
+    })
+    .catch(dbErr => {
+      console.log(dbErr);
+    });
+};
+pushSomeData();
 
 pushTeachingsData = () => {
   const teachings = ({

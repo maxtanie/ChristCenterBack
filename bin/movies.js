@@ -195,11 +195,12 @@ const movies = [
     age: "16 +",
     average: "8.3",
     released: "2016",
-    imageSlide: [
-      "https://www.notrecinema.com/images/cache/tu-ne-tueras-point-wallpaper_531653_16052.jpg",
-      "https://media.senscritique.com/media/000016906266/960/Tu_ne_tueras_point.jpg",
-      "https://obsessionb.files.wordpress.com/2016/11/tu-ne-tueras-point-pic.jpg"
-    ]
+    // imageSlide: [
+    //   "https://www.notrecinema.com/images/cache/tu-ne-tueras-point-wallpaper_531653_16052.jpg",
+    //   "https://media.senscritique.com/media/000016906266/960/Tu_ne_tueras_point.jpg",
+    //   "https://obsessionb.files.wordpress.com/2016/11/tu-ne-tueras-point-pic.jpg"
+    // ],
+    imageSlide: "https://images3.alphacoders.com/803/thumb-1920-803166.jpg"
   },
 
   {
@@ -225,11 +226,12 @@ const movies = [
     age: "16 +",
     average: "8.3",
     released: "2015",
-    imageSlide: [
-      "https://www.notrecinema.com/images/cache/tu-ne-tueras-point-wallpaper_531653_16052.jpg",
-      "https://media.senscritique.com/media/000016906266/960/Tu_ne_tueras_point.jpg",
-      "https://obsessionb.files.wordpress.com/2016/11/tu-ne-tueras-point-pic.jpg"
-    ]
+    // imageSlide: [
+    //   "https://www.notrecinema.com/images/cache/tu-ne-tueras-point-wallpaper_531653_16052.jpg",
+    //   "https://media.senscritique.com/media/000016906266/960/Tu_ne_tueras_point.jpg",
+    //   "https://obsessionb.files.wordpress.com/2016/11/tu-ne-tueras-point-pic.jpg"
+    // ],
+    imageSlide: "https://i.ytimg.com/vi/mIl-XY9t_Lw/maxresdefault.jpg"
   }
 
   // {
