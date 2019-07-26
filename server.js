@@ -23,7 +23,8 @@ const Admin = require("./bin/admin.js");
 
 // cors options : allows your front to communicate through ajax with your backend
 const corsOptions = {
-  credentials: true, // required to let axios pass the cookie with any request
+  origin: "*",
+  // credentials: true, // required to let axios pass the cookie with any request
   optionsSuccessStatus: 200
 };
 // cors setup
