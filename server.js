@@ -110,24 +110,24 @@ pushTeachingsData = () => {
 };
 pushTeachingsData();
 
-// console.log(admin);
-// console.log("--------");
+console.log(admin);
+console.log("--------");
 
-// pushSomeAdminData = () => {
-//   AdminModel.insertMany(Admin)
-//     .then(dbRes => {
-//       console.log(dbRes);
-//       dbRes
-//         .forEach((Admin, i) => console.log(Admin.username, i))
-//         .catch(dbErr => {
-//           console.log(dbErr);
-//         });
-//     })
-//     .catch(dbErr => {
-//       console.log(dbErr);
-//     });
-// };
-// pushSomeAdminData();
+pushSomeAdminData = () => {
+  AdminModel.insertMany(Admin)
+    .then(dbRes => {
+      console.log(dbRes);
+      dbRes
+        .forEach((Admin, i) => console.log(Admin.username, i))
+        .catch(dbErr => {
+          console.log(dbErr);
+        });
+    })
+    .catch(dbErr => {
+      console.log(dbErr);
+    });
+};
+pushSomeAdminData();
 
 app.listen(process.env.PORT, () => {
   console.log("App hosted on: ", process.env.SITE_URL);
