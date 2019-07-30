@@ -68,66 +68,66 @@ app.use("/admin", admin);
 console.log(teachingsAdults);
 
 // Create our Movies Model
-console.log(movies);
-console.log("--------");
-pushSomeData = () => {
-  MoviesModel.insertMany(movies)
-    .then(dbRes => {
-      console.log(dbRes);
-      dbRes
-        .forEach((Movies, i) => console.log(Movies.title, i))
-        .catch(dbErr => {
-          console.log(dbErr);
-        });
-    })
-    .catch(dbErr => {
-      console.log(dbErr);
-    });
-};
-pushSomeData();
+// console.log(movies);
+// console.log("--------");
+// pushSomeData = () => {
+//   MoviesModel.insertMany(movies)
+//     .then(dbRes => {
+//       console.log(dbRes);
+//       dbRes
+//         .forEach((Movies, i) => console.log(Movies.title, i))
+//         .catch(dbErr => {
+//           console.log(dbErr);
+//         });
+//     })
+//     .catch(dbErr => {
+//       console.log(dbErr);
+//     });
+// };
+// pushSomeData();
 
-pushTeachingsData = () => {
-  const teachings = ({
-    titleTeachings,
-    sliderCitation,
-    titleArticle,
-    titleArticle,
-    imageArticle,
-    articlePartOne,
-    articlePartTwo,
-    conclusion
-  } = teachingsAdults);
-  TeachingsAdultsModel.insertMany(teachings)
-    .then(dbRes => {
-      console.log(dbRes);
-      dbRes.forEach((teachingsAdults, i) =>
-        console.log(teachingsAdults.titleTeachings, i)
-      );
-    })
-    .catch(dbErr => {
-      console.log(dbErr);
-    });
-};
-pushTeachingsData();
+// pushTeachingsData = () => {
+//   const teachings = ({
+//     titleTeachings,
+//     sliderCitation,
+//     titleArticle,
+//     titleArticle,
+//     imageArticle,
+//     articlePartOne,
+//     articlePartTwo,
+//     conclusion
+//   } = teachingsAdults);
+//   TeachingsAdultsModel.insertMany(teachings)
+//     .then(dbRes => {
+//       console.log(dbRes);
+//       dbRes.forEach((teachingsAdults, i) =>
+//         console.log(teachingsAdults.titleTeachings, i)
+//       );
+//     })
+//     .catch(dbErr => {
+//       console.log(dbErr);
+//     });
+// };
+// pushTeachingsData();
 
-console.log(admin);
-console.log("--------");
+// console.log(admin);
+// console.log("--------");
 
-pushSomeAdminData = () => {
-  AdminModel.insertMany(Admin)
-    .then(dbRes => {
-      console.log(dbRes);
-      dbRes
-        .forEach((Admin, i) => console.log(Admin.username, i))
-        .catch(dbErr => {
-          console.log(dbErr);
-        });
-    })
-    .catch(dbErr => {
-      console.log(dbErr);
-    });
-};
-pushSomeAdminData();
+// pushSomeAdminData = () => {
+//   AdminModel.insertMany(Admin)
+//     .then(dbRes => {
+//       console.log(dbRes);
+//       dbRes
+//         .forEach((Admin, i) => console.log(Admin.username, i))
+//         .catch(dbErr => {
+//           console.log(dbErr);
+//         });
+//     })
+//     .catch(dbErr => {
+//       console.log(dbErr);
+//     });
+// };
+// pushSomeAdminData();
 
 app.listen(process.env.PORT, () => {
   console.log("App hosted on: ", process.env.SITE_URL);
