@@ -43,18 +43,31 @@ router.post("/teachings/adults", (req, res) => {
     sliderCitation,
     titleArticle,
     imageArticle,
-    articlePartOne,
-    articlePartTwo,
+    articlePartOneTitle,
+    articlePartOneSubTitle,
+    articlePartOneTextArticle,
+    articlePartOneLinkWebPage,
+    articlePartTwoTitle,
+    articlePartTwoSubTitle,
+    articlePartTwoTextArticle,
+    articlePartTwoLinkWebPage,
     conclusion
   } = req.body;
-  console.log(req.body);
+  console.log("BODYYYY3", req.body);
+
   const newTeachingsAdults = {
     titleTeachings,
     sliderCitation,
     titleArticle,
     imageArticle,
-    articlePartOne,
-    articlePartTwo,
+    articlePartOneTitle,
+    articlePartOneSubTitle,
+    articlePartOneTextArticle,
+    articlePartOneLinkWebPage,
+    articlePartTwoTitle,
+    articlePartTwoSubTitle,
+    articlePartTwoTextArticle,
+    articlePartTwoLinkWebPage,
     conclusion
   };
 
